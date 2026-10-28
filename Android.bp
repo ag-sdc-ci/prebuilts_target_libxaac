@@ -31,12 +31,12 @@ cc_library_headers {
         "//apex_available:platform",
     ],
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/common",
-        "dev-src/include/decoder",
-        "dev-src/include/decoder/drc_src",
-        "dev-src/include/encoder",
-        "dev-src/include/encoder/drc_src",
+        "include",
+        "include/common",
+        "include/decoder",
+        "include/decoder/drc_src",
+        "include/encoder",
+        "include/encoder/drc_src",
     ],
 }
 
@@ -48,10 +48,10 @@ cc_prebuilt_library_static {
     host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/common",
-        "dev-src/include/decoder",
-        "dev-src/include/decoder/drc_src",
+        "include",
+        "include/common",
+        "include/decoder",
+        "include/decoder/drc_src",
     ],
     prefer: true,
     apex_available: [
@@ -61,7 +61,7 @@ cc_prebuilt_library_static {
         "test_com.android.media.swcodec",
     ],
     min_sdk_version: "29",
-    srcs: ["dev-src/lib/libxaacdec.a"],
+    srcs: ["lib64/libxaacdec.a"],
 }
 
 cc_prebuilt_library_static {
@@ -72,10 +72,10 @@ cc_prebuilt_library_static {
     host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/common",
-        "dev-src/include/encoder",
-        "dev-src/include/encoder/drc_src",
+        "include",
+        "include/common",
+        "include/encoder",
+        "include/encoder/drc_src",
     ],
     prefer: true,
     apex_available: [
@@ -85,5 +85,5 @@ cc_prebuilt_library_static {
         "test_com.android.media.swcodec",
     ],
     min_sdk_version: "29",
-    srcs: ["dev-src/lib/libxaacenc.a"],
+    srcs: ["lib64/libxaacenc.a"],
 }
